@@ -1,4 +1,4 @@
-@import url(adminRoot.css);
+@import url(agentRoot.css);
 
 .container .flex .content .data-table {
   overflow: auto;
@@ -82,6 +82,9 @@
 }
 
 /* Agent Update Table */
+.container .flex .content .manage .agent-update-table {
+  display: flex;
+}
 .container .flex .content .manage .agent-update-table table tr td {
   padding: 10px 10px;
 }
@@ -107,11 +110,8 @@
   input[type="submit"] {
   padding: 5px 8px;
   height: 40px;
-  max-width: 180px;
-  width: 100%;
-  background-color: var(--btnColor1);
+  width: 180px;
   font-size: var(--subHeading);
-  color: var(--fontColor3);
   border-radius: 10px;
   border: none;
 }
@@ -123,10 +123,65 @@
   table
   tr
   td
-  input[type="submit"]:hover {
+  input[type="submit"].submit {
+  color: var(--fontColor3);
+  background-color: var(--btnColor1);
+}
+.container
+  .flex
+  .content
+  .manage
+  .agent-update-table
+  table
+  tr
+  td
+  input[type="submit"].submit:hover {
   background-color: var(--btnHover1);
 }
+.container
+  .flex
+  .content
+  .manage
+  .agent-update-table
+  table
+  tr
+  td
+  input[type="submit"].cancel {
+  color: var(--btnColor1);
+  border:1px solid var(--btnColor1);
+  background-color: white;
+}
+.container
+  .flex
+  .content
+  .manage
+  .agent-update-table
+  table
+  tr
+  td
+  input[type="submit"].cancel:hover {
+    color: var(--btnHover1);
+    border:1px solid var(--btnHover1);
+    background-color: white;
+}
+@media screen and (max-width: 992px) and (min-width: 616px) {
+  /* Update Agent Details */
+  .container .flex .content .manage .agent-update-table {
+    justify-content: center;
+    text-align: left;
+  }
 
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr:last-child
+    td:first-child {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 616px) {
   /* Table */
   .container .flex .content .data-table {
@@ -164,6 +219,7 @@
   }
   .container .flex .content .manage .agent-update-table table tr td {
     padding: 5px 5px;
+    text-align: left;
   }
   .container .flex .content .manage .agent-update-table table tr td input,
   .container .flex .content .manage .agent-update-table table tr td select {
@@ -179,7 +235,7 @@
     tr
     td
     input[type="submit"] {
-    max-width: 260px;
+    width: 130px;
     margin-top: 10px;
   }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transaction History</title>
-    <link rel="stylesheet" href="css/adminStyles.css" />
+    <link rel="stylesheet" href="css/agentStyles.css" />
     <link rel="stylesheet" href="css/navigation.css" />
     <link rel="stylesheet" href="css/table.css" />
     <link rel="shortcut icon" href="images/Logo.jpeg" type="image/x-icon" />
@@ -35,14 +35,14 @@
           <a href="createWithdrawalRequest.html" class="">
             <i
               class="fa-solid fa-money-bill"
-              style="font-size: 16px; margin-right: 16px"
+              style="font-size: 16px; margin-right: 8px"
             ></i>
             Create Withdrawal Request</a
           >
           <a href="transactionHistory.html" class="active"
             ><i
               class="fa-solid fa-credit-card"
-              style="font-size: 16px; margin-right: 16px"
+              style="font-size: 16px; margin-right: 8px"
             ></i>
             Transaction History</a
           >
@@ -147,32 +147,6 @@
       </div>
     </div>
     <script>
-      let dropdown = document.getElementsByClassName("dropdown-btn");
-      let dropdownDiv = document.getElementById("dropdown-div");
-      let i;
-      let navbar1 = document.getElementById("navigations");
-      let iconChange = document.getElementById("icon-change");
-      for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          let dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === "flex") {
-            dropdownContent.style.display = "none";
-            iconChange.classList.remove("fa-chevron-up");
-            iconChange.classList.add("fa-chevron-down");
-            navbar1.classList.remove("openedDropdown");
-            dropdownDiv.style.backgroundColor = "#f4f6fe";
-          } else {
-            dropdownContent.style.display = "flex";
-            iconChange.classList.remove("fa-chevron-down");
-            iconChange.classList.add("fa-chevron-up");
-            navbar1.classList.add("openedDropdown");
-            dropdownDiv.style.backgroundColor = "#c7ccdf";
-          }
-        });
-      }
-
-      //   Logout
       function logout() {
         let content = document.getElementById("myDropdown");
         if (content.style.display == "block") {
